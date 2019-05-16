@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,11 +17,18 @@ public class PhpAboutTest {
 	@BeforeMethod
 	public void launch() {
 		String OSName = System.getProperty("os.name");
-		if(OSName.startsWith("Windows"))
+		if(OSName.startsWith("Windows")) {
 			System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-		else
-			System.setProperty("webdriver.chrome.driver","chromedriver");
-		  driver = new ChromeDriver();
+			driver = new ChromeDriver();
+		}else {
+			System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--headless");
+	        options.addArguments("--no-sandbox");
+	        options.addArguments("--disable-dev-shm-usage");
+	        driver = new ChromeDriver(options);
+		}
+		  
 		  driver.get("http://192.168.56.101:32770/");
 		  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
