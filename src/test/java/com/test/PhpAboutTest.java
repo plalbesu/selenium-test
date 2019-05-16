@@ -15,7 +15,11 @@ public class PhpAboutTest {
 	WebDriver driver;
 	@BeforeMethod
 	public void launch() {
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		String OSName = System.getProperty("os.name");
+		if(OSName.startsWith("Windows"))
+			System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		else
+			System.setProperty("webdriver.chrome.driver","chromedriver");
 		  driver = new ChromeDriver();
 		  driver.get("http://192.168.56.101:32770/");
 		  driver.manage().window().maximize();
