@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="WebDriver" duration-ms="11248" started-at="2019-02-02T03:24:17Z" finished-at="2019-02-02T03:24:28Z">
+  <suite name="Default suite" duration-ms="4713" started-at="2019-05-16T07:28:38Z" finished-at="2019-05-16T07:28:43Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11248" started-at="2019-02-02T03:24:17Z" finished-at="2019-02-02T03:24:28Z">
-      <class name="TestNG.addbook">
-        <test-method status="PASS" signature="launch()[pri:0, instance:TestNG.addbook@14acaea5]" name="launch" is-config="true" duration-ms="7686" started-at="2019-02-02T03:24:17Z" finished-at="2019-02-02T03:24:24Z">
+    <test name="Default test" duration-ms="4713" started-at="2019-05-16T07:28:38Z" finished-at="2019-05-16T07:28:43Z">
+      <class name="com.test.PhpAboutTest">
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.test.PhpAboutTest@5b275dab]" name="launch" is-config="true" duration-ms="4428" started-at="2019-05-16T07:28:38Z" finished-at="2019-05-16T07:28:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="verifyaddbook()[pri:0, instance:TestNG.addbook@14acaea5]" name="verifyaddbook" duration-ms="1463" started-at="2019-02-02T03:24:24Z" finished-at="2019-02-02T03:24:26Z">
+        <test-method status="PASS" signature="testAbout()[pri:0, instance:com.test.PhpAboutTest@5b275dab]" name="testAbout" duration-ms="181" started-at="2019-05-16T07:28:43Z" finished-at="2019-05-16T07:28:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyaddbook -->
-        <test-method status="PASS" signature="close()[pri:0, instance:TestNG.addbook@14acaea5]" name="close" is-config="true" duration-ms="2070" started-at="2019-02-02T03:24:26Z" finished-at="2019-02-02T03:24:28Z">
+        </test-method> <!-- testAbout -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.test.PhpAboutTest@5b275dab]" name="close" is-config="true" duration-ms="61" started-at="2019-05-16T07:28:43Z" finished-at="2019-05-16T07:28:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- TestNG.addbook -->
-    </test> <!-- Test -->
-  </suite> <!-- WebDriver -->
+      </class> <!-- com.test.PhpAboutTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
